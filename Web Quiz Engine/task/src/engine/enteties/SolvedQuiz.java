@@ -10,17 +10,12 @@ import javax.persistence.*;
 @JsonPropertyOrder({"id", "completedAt"})
 public class SolvedQuiz {
 
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "solvedQuiz_generator")
-    @SequenceGenerator(name="solvedQuiz_generator", sequenceName = "solvedQuiz_seq", allocationSize=50)
-    @Column(name = "idPrimal", updatable = false, nullable = false)
-    private Long id;
+    private Long DataBaseId;
 
-    @Column
-    @JsonProperty("id")
-    private Long questionId;
+    private Long id;
 
     @Column
     @JsonProperty("completedAt")
@@ -30,13 +25,13 @@ public class SolvedQuiz {
     @JsonIgnore
     private String completedBy;
 
-    public SolvedQuiz(Long questionId, String completedAt) {
-        this.questionId = questionId;
+    public SolvedQuiz(Long id, String completedAt) {
+        this.id = id;
         this.completedAt = completedAt;
     }
 
-    public SolvedQuiz(Long questionId, String completedAt, String completedBy) {
-        this.questionId = questionId;
+    public SolvedQuiz(Long id, String completedAt, String completedBy) {
+        this.id = id;
         this.completedAt = completedAt;
         this.completedBy = completedBy;
     }
@@ -45,13 +40,6 @@ public class SolvedQuiz {
 
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getCompletedAt() {
         return completedAt;
@@ -61,12 +49,12 @@ public class SolvedQuiz {
         this.completedAt = completedAt;
     }
 
-    public Long getQuestionId() {
-        return questionId;
+    public Long getId() {
+        return id;
     }
 
-    public void setQuestionId(Long questionId) {
-        this.questionId = questionId;
+    public void setId(Long questionId) {
+        this.id = questionId;
     }
 
     public String getCompletedBy() {

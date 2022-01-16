@@ -21,9 +21,7 @@ import java.util.List;
 public class Quiz {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "quiz_generator")
-    @SequenceGenerator(name="quiz_generator", sequenceName = "quiz_seq", allocationSize=50)
-    @Column(name = "id", updatable = false, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NonNull
@@ -38,7 +36,7 @@ public class Quiz {
 
     @Column
     @ElementCollection
-    @Size(min =2)
+    @Size(min = 2)
     @NotNull
     private List<String> options;
 

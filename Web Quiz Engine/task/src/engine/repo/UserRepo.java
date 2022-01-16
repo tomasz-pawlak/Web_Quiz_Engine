@@ -2,15 +2,12 @@ package engine.repo;
 
 import engine.enteties.User;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
-//public interface UserRepo extends CrudRepository<User, Long> {
+@Repository
 public interface UserRepo extends CrudRepository<User, Long> {
-
-    User findUserById(Long id);
 
     boolean existsUserByEmail(String email);
 
     User findUserByEmail(String email);
-
 }

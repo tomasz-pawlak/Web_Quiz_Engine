@@ -1,8 +1,8 @@
-# Web_Quiz_Engine_REST
-Restful Api cinema room - JetBrains Academy Project.
+# Recipes Rest App
+Restful Web Quiz - JetBrains Academy Project.
 
 ## About
-Application that stores all recipes in one place. Multi-user web service with Spring Boot that allows storing, retrieving, updating, and deleting recipes.
+Quiz type web application project. The project uses the HTTP protocol (requests and responses) to communicate with the user. The user has the function of registering on the website. A registered user can add new questions (which are saved in the database), as well as answer questions from all other users. All successive solutions are saved in the database.
 
 ## Tech
 - Java

@@ -1,4 +1,4 @@
-# Cinema_Room_REST
+# Web_Quiz_Engine_REST
 Restful Api web quiz - JetBrains Academy Project.
 
 ## About

@@ -2,14 +2,13 @@
 Restful Api web quiz - JetBrains Academy Project.
 
 ## About
-Quiz type web application project. The project uses the HTTP protocol (requests and responses) to communicate with the user. The user has the function of registering on the website. A registered user can add new questions (which are saved in the database), as well as answer questions from all other users. All successive solutions are saved in the database.
+Spring REST service that manage a small movie theatre. Handle HTTP requests in controllers, create services and respond with JSON objects. Calculate price of tickets(depends of row/column). Purchase, return ticket. Stats of total purchased tickets.
 
 ## Tech
 - Java
 - Spring Framework
 - Spring Security
-- Hibernate
-- H2 Database
+
 
 ## Illustrations
 
